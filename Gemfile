@@ -10,4 +10,4 @@ gem 'test-kitchen'
 gem 'kitchen-vagrant'
 gem 'kitchen-ec2'
 gem 'unf' # Stop Fog (used by kitchen-ec2) complaining
-gem 'stove'
+gem 'stove', github: 'sethvargo/stove'
