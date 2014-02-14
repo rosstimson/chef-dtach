@@ -8,4 +8,6 @@ gem 'chefspec', '~> 3.2'
 gem 'serverspec', '~> 0.14.2'
 gem 'test-kitchen'
 gem 'kitchen-vagrant'
+gem 'kitchen-ec2'
+gem 'unf' # Stop Fog (used by kitchen-ec2) complaining
 gem 'stove'

@@ -1,68 +1,73 @@
 dtach Cookbook
 ==============
-TODO: Enter the cookbook description here.
 
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+Compiles and installs dtach.
+
+dtach is a tiny program that emulates the detach feature of screen.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
 
-e.g.
-#### packages
-- `toaster` - dtach needs toaster to brown your bagel.
+There are no further dependencies, the cookbook will use plain old Chef to
+install the very minimal requirements dtach needs to build.
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
 
-e.g.
-#### dtach::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['dtach']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+### version
+
+The version of dtach that will be installed.
+
+The default is `0.8`.
+
+### checksum
+
+sha256 checksum of the tarball.
+
+The default is the checksum that matches with dtach-0.8.tar.gz
+
+### install_path
+
+The default location that the compiled dtach executable will be moved to.
+
+The default is `/usr/local/bin`
+
 
 Usage
 -----
-#### dtach::default
-TODO: Write usage instructions for each cookbook.
 
-e.g.
-Just include `dtach` in your node's `run_list`:
+Simply include `recipe[dtach]` in your `run_list`.
 
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[dtach]"
-  ]
-}
-```
+Development
+-----------
 
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
+* Source hosted at [GitHub][repo]
+* Report issues/Questions/Feature requests on [GitHub Issues][issues]
 
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
+Pull requests are very welcome! Make sure your patches are well tested.
+Ideally create a topic branch for every separate change you make.
 
-License and Authors
--------------------
-Authors: TODO: List authors
+License and Author
+------------------
+
+Author:: [Ross Timson][rosstimson] (<ross@rosstimson.com>)
+
+Copyright 2014, Ross Timson
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+[rosstimson]: https://github.com/rosstimson
+[repo]:       https://github.com/rosstimson/chef-dtach
+[issues]:     https://github.com/rosstimson/chef-dtach/issues
+[dtach]:      http://dtach.sourceforge.net/
